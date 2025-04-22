@@ -4,10 +4,11 @@ const App = () => {
   const [user, setUser] = useState([]);
 
   const getUser = () => {
-    fetch("api/user")
-      .then(res => res.json())
-      .then(json => setUser(json));
+    fetch("https://weblab-backend-2qxm.onrender.com/api/user") // Replace with actual backend URL
+      .then((res) => res.json())
+      .then((json) => setUser(json));
   };
+
 
   useEffect(() => {
     getUser();
